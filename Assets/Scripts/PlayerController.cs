@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    private CharacterController cc;
     //Variable déplacement
-    public CharacterController cc;
     public float moveSpeed;
     public float jumpForce;
     public float gravity;
     private Vector3 moveDir;
-
+    private Animator anim;
+    bool isWalking = false;
+    private void Start()
+    {
+        cc = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,9 +36,16 @@ public class PlayerController : MonoBehaviour
         //Check si mouvement
         if(moveDir.x != 0 || moveDir.z != 0)
         {
+            isWalking = true;
             //Tourne regard dans diréction
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3(moveDir.x, 0, moveDir.z)), 0.15f);
         }
+        else
+        {
+            isWalking = false; // On arrete de marcher
+        }
+
+        anim.SetBool("isWalking", isWalking); //indique à l'animator si l'on marche
 
         //Applique déplacement
         cc.Move(moveDir * Time.deltaTime);

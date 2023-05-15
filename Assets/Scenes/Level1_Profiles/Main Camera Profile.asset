@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.34
+    value: 0.3
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -49,7 +49,7 @@ MonoBehaviour:
   quality:
     overrideState: 0
     value: 2
---- !u!114 &-1758576646142719604
+--- !u!114 &-4244840752413247453
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,8 +66,8 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   intensity:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 3
   threshold:
     overrideState: 0
     value: 1
@@ -96,6 +96,34 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
+--- !u!114 &-283136047357415518
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  colored:
+    overrideState: 0
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.068
+  size:
+    overrideState: 1
+    value: 1.08
+  lumContrib:
+    overrideState: 0
+    value: 0.8
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +138,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -6504782060663917852}
-  - {fileID: -1758576646142719604}
   - {fileID: 1891027956456841584}
   - {fileID: 4891987204890058367}
   - {fileID: 5007512493500832814}
+  - {fileID: -4244840752413247453}
+  - {fileID: -283136047357415518}
 --- !u!114 &1891027956456841584
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -166,8 +195,8 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
-    value: 46
+    overrideState: 1
+    value: 4
   tint:
     overrideState: 0
     value: 0
@@ -185,7 +214,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.58
+    value: 0.6
   contrast:
     overrideState: 1
     value: 4
@@ -218,7 +247,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 1, y: 1, z: 1, w: 0.09756097}
   gamma:
     overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
@@ -1443,7 +1472,7 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 4.51
+    value: 4
   aperture:
     overrideState: 1
     value: 4
@@ -1451,7 +1480,7 @@ MonoBehaviour:
     overrideState: 1
     value: 44
   kernelSize:
-    overrideState: 0
+    overrideState: 1
     value: 1
 --- !u!114 &5007512493500832814
 MonoBehaviour:
@@ -1480,7 +1509,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.344
+    value: 0.399
   smoothness:
     overrideState: 0
     value: 0.2
